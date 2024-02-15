@@ -72,7 +72,8 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    //Now we are going to manually inser the user information
+    //Now we are going to manually insert the user information. Note: Uncomment the below 2 lines before running the command "npm run start" in the terminal. Also comment the below two line again after the server runs for once.
+    //This is to avoid duplicates. Because if the below two lines are not commented again every time you make a change in the server the server will restart and add the users info in the mongodb database.
     // User.insertMany(users);
     // Post.insertMany(posts);
   })
